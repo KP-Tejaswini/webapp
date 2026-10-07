@@ -1,0 +1,331 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wanderly - Explore the World</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #6c5ce7, #0984e3);
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        .hero {
+            min-height: 500px;
+            background: linear-gradient(135deg, #74b9ff, #a29bfe);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            color: white;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 21px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #6c5ce7;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero-image {
+            width: 400px;
+        }
+
+        .hero-image img {
+            width: 100%;
+        }
+
+        .section {
+            padding: 60px 8%;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            color: #777;
+            margin-bottom: 40px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 300px;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-image img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .bali {
+            background: #ffeaa7;
+        }
+
+        .paris {
+            background: #dfe6e9;
+        }
+
+        .australia {
+            background: #81ecec;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .ci {
+            background: linear-gradient(135deg, #00b894, #00cec9);
+            color: white;
+            text-align: center;
+            padding: 55px 8%;
+        }
+
+        .ci h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .ci p {
+            font-size: 18px;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        @media (max-width: 800px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero-image {
+                width: 280px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌍 Wanderly</div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Packages</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Explore The World 🌎</h1>
+
+        <p>
+            Discover beautiful destinations, create unforgettable
+            memories and start your next adventure.
+        </p>
+
+        <a href="#" class="btn">Start Exploring</a>
+
+    </div>
+
+    <div class="hero-image">
+        <img src="images/travel1.svg" alt="Travel illustration">
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <h2>Popular Destinations</h2>
+
+    <p class="section-subtitle">
+        Pack your bags and discover amazing places.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-image bali">
+                <img src="images/travel1.svg" alt="Bali">
+            </div>
+
+            <div class="card-content">
+                <h3>🌴 Bali</h3>
+                <p>
+                    Beautiful beaches, tropical adventures and
+                    peaceful surroundings.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image paris">
+                <img src="images/travel2.svg" alt="Paris">
+            </div>
+
+            <div class="card-content">
+                <h3>🗼 Paris</h3>
+                <p>
+                    Experience the beauty, culture and romance
+                    of the city of lights.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-image australia">
+                <img src="images/travel3.svg" alt="Australia">
+            </div>
+
+            <div class="card-content">
+                <h3>🦘 Australia</h3>
+                <p>
+                    Explore amazing beaches, wildlife and
+                    unforgettable adventures.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="ci">
+
+    <h2>🚀 CI Pipeline Successfully Deployed!</h2>
+
+    <p>
+        GitHub → Jenkins → Maven → Docker → Application
+    </p>
+
+</section>
+
+
+<footer>
+
+    <p>© 2026 Wanderly | DevOps CI Practice Project 🚀</p>
+
+</footer>
+
+</body>
+</html>
+```
