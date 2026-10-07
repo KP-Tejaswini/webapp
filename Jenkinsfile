@@ -8,13 +8,7 @@ pipeline {
 
     stages {
 
-        stage('Code Compile') {
-            steps {
-                sh 'mvn compile'
-            }
-        }
-
-        stage('Code Package') {
+        stage('Build') {
             steps {
                 sh 'mvn clean install'
             }
@@ -22,15 +16,15 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t kptejaswini/project-1 .'
+                sh 'docker build --no-cache -t kptejaswini/travel-app:latest .'
             }
         }
 
         stage('Run Container') {
             steps {
                 sh '''
-                    docker rm -f c8 2>/dev/null || true
-                    docker run -d --name c8 -p 9008:8080 kptejaswini/project-1
+                    docker rm -f travel-c8 2>/dev/null || true
+                    docker run -d --name travel-c8 -p 9010:8080 kptejaswini/travel-app:latest
                 '''
             }
         }
@@ -51,7 +45,7 @@ pipeline {
 
         stage('Push Image') {
             steps {
-                sh 'docker push kptejaswini/project-1'
+                sh 'docker push kptejaswini/travel-app:latest'
             }
         }
     }
